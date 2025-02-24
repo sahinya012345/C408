@@ -1,0 +1,19 @@
+
+The Bandit is a wargame for those who are beginners at Linux/UNIX environment and are facing problems while learning the real-time use of Linux commands. The game will teach the basics of Linux and will make you compatible to play even other wargames. 
+This game basically provides you the environment which is similar to real-time with files having data the same as used in real time. Basically, the game starts with level 0. Then to proceed further you have to visit the Official Game Website and there is a hint for every level would be given. What you have to do is just go through the hint, find the password for the next level using that hint and proceed further. And to get the password you will have to use Linux Commands which will help you in understanding the Linux commands easily.  
+How to Get Started With the Game?
+1. Open Terminal and Enter the following command.  
+$ssh bandit0@bandit.labs.overthewire.org -p 2220
+It will ask for a password 
+ 
+Enter password -> bandit0
+2. After entering the password you will be connected to the server of the game. 
+ 
+Now enter the following command 
+$ls
+$cat readme
+3. It will give you the password for the next level. The highlighted text in the image is the password for the next level. 
+ 
+Now, after getting your first level done, use the exit command to exit the current level. Similarly, continue with the game, now to connect to level 1 use the following command. 
+$ssh bandit1@bandit.labs.overthewire.org -p 2220
+
