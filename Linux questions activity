@@ -1,0 +1,62 @@
+.lsof command
+2.smtp port number how hardlink and softlink work in ubuntu
+3.dns port
+4.ssh port
+5.what the difference between scp and sftp
+6.what is inode and process id
+7.Top command
+8.chmod and chown
+9.tail
+10.find command
+11.grep command
+12.what is Ram
+13.what is file system
+14.what is ps command
+15.password less authentication
+16.what is scp? and sftp
+17.scp
+18.how to  add user and delete and block the user
+19.diff cp scp
+20.inode
+21.hardlink or softlink
+22.mount and unmount
+23.watch 'docker diff a2311'
+24.Difference Between su and sudo
+25.free -h ,free -m,free 
+26.grub command
+27.netstat -nltp (to check which ports are open)
+28.free -m
+29.how many ways using which we can create the file
+30.split 
+31.shuffle
+32.alias 
+33.df -h :disk related
+34.ls cpu:
+35./poc/meminfo
+36.$$
+37.less 
+38.more
+39.find
+40.locate
+41.dbupdate
+42.said
+43.traceroute and tracepath
+44.port
+45.ping :Programmer internet grafer and used to check the connectivity
+46.nested
+47.ssh 
+48.telnet -23 port work
+49.ftp:21
+50.http:80 https:443 dns 53 
+51.to change the port number etc/ssh/sshd
+52.email
+53.zombie
+54.linux partition
+55.w
+56.ls -lart
+57.nested and ss
+58.how to manage logs 
+59.what is you want to install the same things in 1000 of server what u will do 
+60.said command 
+61.grep command 
+62.have u worked with any web services ?
