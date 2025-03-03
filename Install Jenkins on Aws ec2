@@ -1,0 +1,24 @@
+37  sudp yum update
+   38  sudo yum update
+   39  sudo yum upgrade
+   40  sudo wget -O /etc/yum.repos.d/jenkins.repo     https://pkg.jenkins.io/redhat-stable/jenkins.repo
+   41  sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+   42  sudo yum upgrade
+   43  sudo yum update
+   44* sudo yum install 
+   45  sudo yum install  java-openjdk17
+   46  java17
+   47  sudo dnf install fontconfig java-17-openjdk
+   48  sudo yum install fontconfig java-17-openjdk
+   49   sudo dnf install java-17-amazon-corretto -y
+   50  ls
+   51  java
+   52  java -v
+   53  java --version
+   54  sudo yum install jenkins
+   55  sudo systemctl enable jenkins
+   56  sudo systemctl statrt jenkins
+   57  sudo systemctl start jenkins
+   58  sudo systemctl status jenkins
+   59  cat /var/lib/jenkins/secrets/initialAdminPassword
+   60  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
