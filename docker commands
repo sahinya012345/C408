@@ -1,0 +1,389 @@
+   1  sudo apt update
+    2  sudo apt upgrade
+    3  sudo apt install docker
+    4  sudo apt install docker-ce
+    5  for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+    6  sudo apt-get install ca-certificates curl
+    7  sudo install -m 0755 -d /etc/apt/keyrings
+    8  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+    9  sudo chmod a+r /etc/apt/keyrings/docker.asc
+   10  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+   11    $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   12  sudo apt-get update
+   13  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   14  systemctl status docker
+   15  docker --version
+   16  history
+   17  ls
+   18  docker -v
+   19  docker images ls
+   20  docker container ls
+   21  docker cli
+   22  dockercli -v
+   23  dockercli --v
+   24  I wnt tp create a python container
+   25  docker pull python:windowsservercore-ltsc2025
+   26  docker pull python
+   27  docker imahes
+   28  docker images
+   29  docker pull ubuntu
+   30  docker images
+   31  docker run -itd python
+   32  docker ps -a
+   33  docker run -it python
+   34  docker ps -a
+   35  docker start 3737209854cc
+   36  docker ps -a
+   37  docker run -itd ubuntu /bin/bash
+   38  docker ps -a
+   39  docker exec -it 26c0eadccfda /bin/bash
+   40  history
+   41  docker run -itd ubuntu /bin/bash
+   42  docker ps -a
+   43  docker ps 
+   44  mkdir dev-site test-site
+   45  ls
+   46  cd test-site/
+   47  ls
+   48  touch dockerfile
+   49  vi dockerfile 
+   50  docker build -t test-httpd
+   51  ll
+   52  chmod 777 dockerfile 
+   53  docker build -t test-httpd
+   54  docker buildx  build -t test-httpd
+   55  docker buildx  build -t test-httpd .
+   56  ls
+   57  docker images
+   58  docker run -itd test-httpd
+   59  docker ps -a
+   60  docker run -itd --name test-httpd-container -p 80:80 test-httpd
+   61  docker ps -a
+   62  docker rm bdc2f5be0b27
+   63  docker stop  bdc2f5be0b27
+   64  docker ps -a
+   65  docker rm bdc2f5be0b27
+   66  history
+   67  docker -v
+   68  docker
+   69  docker -v
+   70  docker images
+   71  docker pull ubuntu
+   72  docker images
+   73  docker pull centos
+   74  docker images
+   75  docker pull crate
+   76  docker images
+   77  docker run -itd centos /bin/bash
+   78  docker ps -a
+   79  docker run -it centos /bin/bash
+   80  docker ps -a
+   81  ls
+   82  docker start 5b23bb111821
+   83  docker ps -a
+   84  docker exec -it 5b23bb111821 /bin/bash
+   85  docker ps -a
+   86  ls
+   87  cd test-site/
+   88  ls
+   89  cat dockerfile
+   90  history
+   91  cd ..
+   92  cd dev-site/
+   93  ls
+   94  mkdir public-html
+   95  ls
+   96  ll
+   97  cd public-html/
+   98  ls
+   99  touch index.html
+  100  ll
+  101  chmod +x index.html 
+  102  ll
+  103  vi index.html 
+  104  cat index.html 
+  105  cd ..
+  106  ls
+  107  cd public-html/
+  108  ls
+  109  rm index.html 
+  110  ls
+  111  touch index.html
+  112  chmod +x index.html 
+  113  vi index.html 
+  114  cat index.html 
+  115  cd ..
+  116  ls
+  117  touch dockerfile
+  118  chmod +x dockerfile 
+  119  vi dockerfile 
+  120  cat dockerfile 
+  121  docker build -t dev-httpd .
+  122  ls
+  123  docker images
+  124  history
+  125  ls
+  126  cat dockerfile 
+  127  docker images
+  128  ls
+  129  docker run -itd --name dev-httpsd-container dev-httpd -p 80:80
+  130  docker run -itd --name dev-httpd-container dev-httpd -p 8080:80
+  131  docker ps
+  132  docker ps -a
+  133  sudo docker run -dit --name dev-httpd-container -p 8080:80 dev-httpd
+  134  sudo docker run -dit --name dev-https-container -p 8081:80 dev-httpd
+  135  docker ps -a
+  136  history
+  137  docker ps -a
+  138  ls
+  139  cd .../../..
+  140  cd ../../..
+  141  cd var/lib/docker
+  142  ls
+  143  pwd
+  144  ll
+  145  cd image
+  146  ls
+  147  ll
+  148  cd overlay2/
+  149  ls
+  150  cd ..
+  151  docker ps 
+  152  docker inspect container cfa15fa1304f
+  153  docker ps -a
+  154  docker rm -f dev-https-container
+  155  docker ps -a
+  156  docker rm -f dev-httpd-container
+  157  docker ps -a
+  158  sudo docker run -dit -v /home/ec2-user/dev-site/public-html:/usr/local/apache2/htdocs \ --name dev-httpd-container -p 8080:80 dev-httpd
+  159  sudo docker run -dit -v /home/ec2-user/dev-site/public-html:/usr/local/apache2/htdocs --name dev-httpd-container -p 8080:80 dev-httpd
+  160  docker ps -a
+  161  cd ..
+  162  cd ~
+  163  ls
+  164  cd home
+  165  cd ..
+  166  cd home
+  167  ls
+  168  cd ubuntu
+  169  ls
+  170  cd dev-site/
+  171  ls
+  172  docker ps -a
+  173  ls
+  174  docker stop 35.171.160.195 d332ddb81aa6 
+  175  docker stop f8ee8cf9ecb2
+  176  docker stop d332ddb81aa6 
+  177  docker rm  d332ddb81aa6 
+  178  docker rm  f8ee8cf9ecb2
+  179  docke rps
+  180  docker rps
+  181  docker ps
+  182  docker images
+  183  docker rmi crate
+  184  docker rmi ubuntu
+  185  history
+root@ip-172-31-80-136:/home/ubuntu/dev-site# docker container top inifinite
+Error response from daemon: No such container: inifinite
+root@ip-172-31-80-136:/home/ubuntu/dev-site# docker ps
+CONTAINER ID   IMAGE        COMMAND              CREATED        STATUS        PORTS                                 NAMES
+5b23bb111821   centos       "/bin/bash"          5 hours ago    Up 5 hours                                          romantic_lamarr
+58d8c2398feb   centos       "/bin/bash"          5 hours ago    Up 5 hours                                          frosty_albattani
+5b69af52e540   test-httpd   "httpd-foreground"   24 hours ago   Up 24 hours   0.0.0.0:80->80/tcp, [::]:80->80/tcp   test-httpd-container
+1b61de48a935   ubuntu       "/bin/bash"          24 hours ago   Up 24 hours                                         youthful_hofstadter
+26c0eadccfda   ubuntu       "/bin/bash"          24 hours ago   Up 24 hours                                         flamboyant_hofstadter
+3737209854cc   python       "python3"            24 hours ago   Up 24 hours                                         xenodochial_ardinghelli
+452154f1354c   python       "python3"            24 hours ago   Up 24 hours                                         happy_goldberg
+root@ip-172-31-80-136:/home/ubuntu/dev-site# docker container top 5b23bb111821
+UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD
+root                24652               24630               0                   04:37               pts/0               00:00:00            /bin/bash
+root@ip-172-31-80-136:/home/ubuntu/dev-site# history
+    1  sudo apt update
+    2  sudo apt upgrade
+    3  sudo apt install docker
+    4  sudo apt install docker-ce
+    5  for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+    6  sudo apt-get install ca-certificates curl
+    7  sudo install -m 0755 -d /etc/apt/keyrings
+    8  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+    9  sudo chmod a+r /etc/apt/keyrings/docker.asc
+   10  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+   11    $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   12  sudo apt-get update
+   13  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   14  systemctl status docker
+   15  docker --version
+   16  history
+   17  ls
+   18  docker -v
+   19  docker images ls
+   20  docker container ls
+   21  docker cli
+   22  dockercli -v
+   23  dockercli --v
+   24  I wnt tp create a python container
+   25  docker pull python:windowsservercore-ltsc2025
+   26  docker pull python
+   27  docker imahes
+   28  docker images
+   29  docker pull ubuntu
+   30  docker images
+   31  docker run -itd python
+   32  docker ps -a
+   33  docker run -it python
+   34  docker ps -a
+   35  docker start 3737209854cc
+   36  docker ps -a
+   37  docker run -itd ubuntu /bin/bash
+   38  docker ps -a
+   39  docker exec -it 26c0eadccfda /bin/bash
+   40  history
+   41  docker run -itd ubuntu /bin/bash
+   42  docker ps -a
+   43  docker ps 
+   44  mkdir dev-site test-site
+   45  ls
+   46  cd test-site/
+   47  ls
+   48  touch dockerfile
+   49  vi dockerfile 
+   50  docker build -t test-httpd
+   51  ll
+   52  chmod 777 dockerfile 
+   53  docker build -t test-httpd
+   54  docker buildx  build -t test-httpd
+   55  docker buildx  build -t test-httpd .
+   56  ls
+   57  docker images
+   58  docker run -itd test-httpd
+   59  docker ps -a
+   60  docker run -itd --name test-httpd-container -p 80:80 test-httpd
+   61  docker ps -a
+   62  docker rm bdc2f5be0b27
+   63  docker stop  bdc2f5be0b27
+   64  docker ps -a
+   65  docker rm bdc2f5be0b27
+   66  history
+   67  docker -v
+   68  docker
+   69  docker -v
+   70  docker images
+   71  docker pull ubuntu
+   72  docker images
+   73  docker pull centos
+   74  docker images
+   75  docker pull crate
+   76  docker images
+   77  docker run -itd centos /bin/bash
+   78  docker ps -a
+   79  docker run -it centos /bin/bash
+   80  docker ps -a
+   81  ls
+   82  docker start 5b23bb111821
+   83  docker ps -a
+   84  docker exec -it 5b23bb111821 /bin/bash
+   85  docker ps -a
+   86  ls
+   87  cd test-site/
+   88  ls
+   89  cat dockerfile
+   90  history
+   91  cd ..
+   92  cd dev-site/
+   93  ls
+   94  mkdir public-html
+   95  ls
+   96  ll
+   97  cd public-html/
+   98  ls
+   99  touch index.html
+  100  ll
+  101  chmod +x index.html 
+  102  ll
+  103  vi index.html 
+  104  cat index.html 
+  105  cd ..
+  106  ls
+  107  cd public-html/
+  108  ls
+  109  rm index.html 
+  110  ls
+  111  touch index.html
+  112  chmod +x index.html 
+  113  vi index.html 
+  114  cat index.html 
+  115  cd ..
+  116  ls
+  117  touch dockerfile
+  118  chmod +x dockerfile 
+  119  vi dockerfile 
+  120  cat dockerfile 
+  121  docker build -t dev-httpd .
+  122  ls
+  123  docker images
+  124  history
+  125  ls
+  126  cat dockerfile 
+  127  docker images
+  128  ls
+  129  docker run -itd --name dev-httpsd-container dev-httpd -p 80:80
+  130  docker run -itd --name dev-httpd-container dev-httpd -p 8080:80
+  131  docker ps
+  132  docker ps -a
+  133  sudo docker run -dit --name dev-httpd-container -p 8080:80 dev-httpd
+  134  sudo docker run -dit --name dev-https-container -p 8081:80 dev-httpd
+  135  docker ps -a
+  136  history
+  137  docker ps -a
+  138  ls
+  139  cd .../../..
+  140  cd ../../..
+  141  cd var/lib/docker
+  142  ls
+  143  pwd
+  144  ll
+  145  cd image
+  146  ls
+  147  ll
+  148  cd overlay2/
+  149  ls
+  150  cd ..
+  151  docker ps 
+  152  docker inspect container cfa15fa1304f
+  153  docker ps -a
+  154  docker rm -f dev-https-container
+  155  docker ps -a
+  156  docker rm -f dev-httpd-container
+  157  docker ps -a
+  158  sudo docker run -dit -v /home/ec2-user/dev-site/public-html:/usr/local/apache2/htdocs \ --name dev-httpd-container -p 8080:80 dev-httpd
+  159  sudo docker run -dit -v /home/ec2-user/dev-site/public-html:/usr/local/apache2/htdocs --name dev-httpd-container -p 8080:80 dev-httpd
+  160  docker ps -a
+  161  cd ..
+  162  cd ~
+  163  ls
+  164  cd home
+  165  cd ..
+  166  cd home
+  167  ls
+  168  cd ubuntu
+  169  ls
+  170  cd dev-site/
+  171  ls
+  172  docker ps -a
+  173  ls
+  174  docker stop 35.171.160.195 d332ddb81aa6 
+  175  docker stop f8ee8cf9ecb2
+  176  docker stop d332ddb81aa6 
+  177  docker rm  d332ddb81aa6 
+  178  docker rm  f8ee8cf9ecb2
+  179  docke rps
+  180  docker rps
+  181  docker ps
+  182  docker images
+  183  docker rmi crate
+  184  docker rmi ubuntu
+  185  history
+  186  docker container top inifinite
+  187  docker ps
+  188  docker container top 5b23bb111821
+  189  history
